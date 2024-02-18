@@ -1,0 +1,22 @@
+{
+    "name": "muneebkh2/api-keys",
+    "type": "composer-plugin",
+    "autoload": {
+        "psr-4": {
+            "Muneebkh2\\ApiKeys\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Muneebkh2\\ApiKeys\\ApiKeysPackageServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Muneeb"
+        }
+    ],
+    "require": {}
+}
