@@ -1,6 +1,6 @@
 {
     "name": "muneebkh2/api-keys",
-    "type": "composer-plugin",
+    "type": "library",
     "autoload": {
         "psr-4": {
             "Muneebkh2\\ApiKeys\\": "src/"
