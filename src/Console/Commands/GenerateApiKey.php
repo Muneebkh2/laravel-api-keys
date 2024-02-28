@@ -49,8 +49,10 @@ class GenerateApiKey extends Command
         $apiKey->active = true;
         $apiKey->save();
 
+        ApiKey::updatePreviousKeyAsUnActive($apiKey->id);
         $this->info('API key created');
         $this->info('Name: ' . $apiKey->name);
         $this->info('Key: '  . $apiKey->key);
+
     }
 }

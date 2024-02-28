@@ -6,9 +6,6 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * @method static where(string $string, int $int)
- */
 class ApiKey extends Model
 {
     use HasFactory;
@@ -105,9 +102,9 @@ class ApiKey extends Model
      *
      * @return bool
      */
-    public static function updatePreviousKeyToUnActive() : bool
+    public static function updatePreviousKeyAsUnActive($currentKeyId) : bool
     {
-        $key = self::where('active', 1)->first();
-        return $key ? self::where('active', 1)->update(['active'=>0]) : false;
+        $key = self::where('id', '!=', $currentKeyId)->where('active', 1);
+        return $key->first() ? $key->update(['active' => 0]) : false;
     }
 }
