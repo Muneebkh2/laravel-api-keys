@@ -1,6 +1,17 @@
 {
     "name": "muneebkh2/api-keys",
-    "type": "library",
+    "license": "MIT",
+    "description": "Generate and use header based API token for laravel api's.",
+    "keywords": [
+        "API",
+        "token",
+        "laravel",
+        "api-token",
+        "authorizatoin",
+        "api-auth",
+        "api-keys"
+    ],
+    "homepage": "http://github.com/muneebkh2/laravel-api-keys",
     "autoload": {
         "psr-4": {
             "Muneebkh2\\ApiKeys\\": "src/"
